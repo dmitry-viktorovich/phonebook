@@ -1,8 +1,26 @@
 <html>
     <head>
         <title>Phonebook</title>
+        
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'phonebook/style.css' %}" type="text/css">
     </head>
     <body>
-        Welcome to Phonebook
+        <!-- <div class="container">
+            <h1>Welcome</h1>
+            Welcome to Phonebook
+            <button class="btn btn-danger" type="button" name="button">Button</button>
+        </div>
+        <h1>{{ myName }}</h1>
+        <ul>
+            {% for number in numbers %}
+            <li>{{ number }}</li>
+            {% endfor %}
+        </ul> -->
+        <ul>
+            {% for person in persons %}
+            <li>{{ person }}</li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
