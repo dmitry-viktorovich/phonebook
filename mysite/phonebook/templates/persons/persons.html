@@ -6,22 +6,14 @@
         <link rel="stylesheet" href="{% static 'phonebook/style.css' %}" type="text/css">
     </head>
     <body>
-        <!-- <div class="container">
-            <h1>Welcome</h1>
-            Welcome to Phonebook
-            <button class="btn btn-danger" type="button" name="button">Button</button>
-        </div>
-        <h1>{{ myName }}</h1>
-        <ul>
-            {% for number in numbers %}
-            <li>{{ number }}</li>
-            {% endfor %}
-        </ul> -->
-        <ul>
-            {% for person in persons %}
-            First name: {{ person.first_name }}<br>
-            Last name: {{ person.last_name }}
-            {% endfor %}
-        </ul>
+        {% for person in persons %}
+        First name: {{ person.first_name }}<br>
+        Last name: {{ person.last_name }}<br>
+        {% endfor %}
+
+        {% for contact in contacts %}
+        Phone number: {{ contact.mobile_number }}<br>
+        Email: <a href="mailto:">{{ contact.email }}</a>
+        {% endfor %}
     </body>
 </html>
