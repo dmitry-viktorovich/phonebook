@@ -19,7 +19,8 @@
         </ul> -->
         <ul>
             {% for person in persons %}
-            <li>{{ person }}</li>
+            First name: {{ person.first_name }}<br>
+            Last name: {{ person.last_name }}
             {% endfor %}
         </ul>
     </body>
