@@ -1,9 +1,8 @@
 # from django.http import HttpResponse
 from django.shortcuts import render, HttpResponse
-from phonebook.models import Person, Contact
+from phonebook.models import Person
 
 def index(request):
     person = Person.objects.all()
-    contact = Contact.objects.all()
-    args = {'persons':person, 'contacts':contact}
+    args = {'persons':person}
     return render(request, 'persons/persons.html', args)
