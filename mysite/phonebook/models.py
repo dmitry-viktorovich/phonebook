@@ -1,11 +1,12 @@
 from django.db import models
 
 class Person(models.Model):
-    first_name = models.CharField(max_length=255)
-    last_name = models.CharField(max_length=255)
-    middle_name = models.CharField(max_length=255, blank=True)
-    mobile_number = models.CharField(max_length=11, blank=True)
-    extension_number = models.IntegerField(blank=True)
+    givenname = models.CharField(max_length=255, blank=True)
+    surname = models.CharField(max_length=255, blank=True)
+    othername = models.CharField(max_length=255, blank=True)
+    company = models.CharField(max_length=255, blank=True)
+    mobile = models.CharField(max_length=255, blank=True)
+    telephoneNumber = models.CharField(max_length=255, blank=True)
     department = models.CharField(max_length=255, blank=True)
-    department_position = models.CharField(max_length=255, blank=True)
-    email = models.EmailField(max_length=255, blank=True)
+    title = models.CharField(max_length=255, blank=True)
+    mail = models.EmailField(max_length=255, blank=True)

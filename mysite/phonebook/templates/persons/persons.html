@@ -16,6 +16,7 @@
         <thead>
             <tr id="tableHeader">
                 <th>ФИО</th>
+                <th>Компания</th>
                 <th>Отдел</th>
                 <th>Должность</th>
                 <th>Внутренний номер</th>
@@ -26,24 +27,27 @@
         {% for person in persons %}
         <tr>
             <td>
-                {{ person.last_name }}
-                {{ person.first_name }}
-                {{ person.middle_name }}
+                {{ person.surname }}
+                {{ person.givenname }}
+                {{ person.othername }}
+            </td>
+            <td>
+                {{ person.company }}
             </td>
             <td>
                 {{ person.department }}
             </td>
             <td>
-                {{ person.department_position }}
+                {{ person.title }}
             </td>
             <td>
-                {{ person.extension_number }}
+                {{ person.telephoneNumber }}
             </td>
             <td>
-                {{ person.mobile_number }}
+                {{ person.mobile }}
             </td>
             <td>
-                <a href="mailto:{{ person.email }}">{{ person.email }}</a>
+                <a href="mailto:{{ person.mail }}">{{ person.mail }}</a>
             </td>
         </tr>
         {% endfor %}
